@@ -3,6 +3,9 @@
 ### Jeremiah Iro
 (https://documenter.getpostman.com/view/6901755/SVSGMpeC)
 
+### Api Available at
+(https://sims2019api.herokuapp.com/)
+
 
 **unauthenticated route**
 - [x] *register*

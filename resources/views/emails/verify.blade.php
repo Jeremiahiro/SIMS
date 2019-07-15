@@ -292,10 +292,10 @@
                                 <table border="0" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td>
-                                            <h3>Hi <small>{{$user->full_name}}</small>,</h3>
+                                            <h3>Hi <small>{{ $user->full_name }}</small>,</h3>
                                             <h2>Thank you for registering with us</h2>
 
-                                            <p>Verification Code: <br><Strong>{{ $user->token }}</Strong></p>
+                                            <p>Verification Code: <br><Strong>{{n}}</Strong></p>
 
                                         </td>
                                     </tr>
