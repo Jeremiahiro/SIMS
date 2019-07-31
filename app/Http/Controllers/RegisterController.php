@@ -31,8 +31,6 @@ class RegisterController extends Controller
             'token' => $token,
             'avater' => $default_avater,
             'email' => $request->input('email'),
-            'phone' => $request->input('phone'),
-            'gender' => $request->input('gender'),
             'full_name' => $request->input('full_name'),
             'password' => Hash::make($request->get('password')),
         ]);
@@ -64,13 +62,10 @@ class RegisterController extends Controller
 			'full_name' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6|confirmed',
-            'phone' => 'required|phone:AUTO,US',
-            'gender' => 'required'
 		];
 		$messages = [
 			'required' => ':attribute is required',
 			'email' => 'wrong :attribute format',
-			'phone' => 'invalid :attribute number',
 	];
 		$this->validate($request, $rules, $messages);
 		}

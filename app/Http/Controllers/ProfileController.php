@@ -76,8 +76,12 @@ class ProfileController extends Controller
         $user->level = $request->input('level');
         $user->state = $request->input('state');
         $user->phone = $request->input('phone');
+        $user->gender = $request->input('gender');
         $user->address = $request->input('address');
-        $user->full_name = $request->input('full_name');
+        if(!empty($request->input('full_name')))
+        {
+            $user->full_name = $request->input('full_name');
+        }
         $user->occupation = $request->input('occupation');
         $user->nationality = $request->input('nationality');
         $user->marital_status = $request->input('marital_status');
@@ -104,11 +108,12 @@ class ProfileController extends Controller
         'lga' => 'string',
         'state' => 'string',
         'level' => 'string',
+        'gender' => 'string',
         'address' => 'string',
         'nationality' => 'string',
         'occupation' => 'string',
         'marital_status' => 'string',
-        'full_name' => 'required|string',
+        'full_name' => 'sometimes|string',
         'phone' => 'required|phone:AUTO,US',
         'password' => 'nullable|min:6|different:current_password|confirmed',
         ];
