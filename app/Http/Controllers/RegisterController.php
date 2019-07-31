@@ -40,8 +40,8 @@ class RegisterController extends Controller
             );
  
             $res['success'] = true;
-            $res['data'] = $user;
-			$res['message'] = "Registration Successful! A Verification Mail has been Sent to $user->email";
+            $res['message'] = "Registration Successful! A Verification Mail has been Sent to $user->email";
+            $res['data'] = $user;            
 
             DB::commit();
 
